@@ -14,8 +14,10 @@
         body {
             font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
             min-height: 100vh;
+            overflow-y: auto;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            -webkit-overflow-scrolling: touch;
         }
         
         .screen {
@@ -33,32 +35,34 @@
         /* ===== 第一屏 ===== */
         .screen1 {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-            padding: 20px 15px;
-            overflow-y: auto;
-            overflow-x: hidden;
+            padding: 15px 12px;
             justify-content: flex-start;
-            padding-top: 30px;
         }
         
-        @media (max-height: 700px) {
+        @media (max-width: 400px) {
             .birthday-cake {
-                transform: scale(0.7);
-                margin-bottom: 10px;
+                transform: scale(0.6);
+                margin-bottom: 5px;
             }
             .card {
-                padding: 20px 18px;
+                padding: 15px 12px;
+                margin: 0 5px;
             }
             .card-title {
-                font-size: 22px;
+                font-size: 20px;
+                margin-bottom: 12px;
             }
             .card-content {
-                font-size: 14px;
-                line-height: 1.7;
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            .card-content p {
+                margin-bottom: 8px;
             }
             .start-btn {
                 margin-top: 15px;
-                padding: 14px 40px;
-                font-size: 16px;
+                padding: 12px 35px;
+                font-size: 15px;
             }
         }
         
@@ -371,10 +375,10 @@
         }
         
         .click-btn {
-            width: 210px;
-            height: 210px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            font-size: 26px;
+            font-size: 20px;
             font-weight: 800;
             color: #1a1a2e;
             background: linear-gradient(145deg, #ffd93d 0%, #ff9f43 100%);
