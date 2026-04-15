@@ -33,8 +33,33 @@
         /* ===== 第一屏 ===== */
         .screen1 {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-            padding: 40px 20px;
-            overflow: hidden;
+            padding: 20px 15px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+        
+        @media (max-height: 700px) {
+            .birthday-cake {
+                transform: scale(0.7);
+                margin-bottom: 10px;
+            }
+            .card {
+                padding: 20px 18px;
+            }
+            .card-title {
+                font-size: 22px;
+            }
+            .card-content {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+            .start-btn {
+                margin-top: 15px;
+                padding: 14px 40px;
+                font-size: 16px;
+            }
         }
         
         .firework {
@@ -256,8 +281,29 @@
         /* ===== 第二屏 ===== */
         .screen2 {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            padding: 40px 20px;
-            overflow: hidden;
+            padding: 20px 15px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+        
+        @media (max-height: 700px) {
+            .game-title {
+                font-size: 24px;
+            }
+            .stat-value {
+                font-size: 36px;
+            }
+            .click-btn {
+                width: 150px;
+                height: 150px;
+                font-size: 20px;
+            }
+            .game-stats {
+                padding: 15px 10px;
+                margin-bottom: 20px;
+            }
         }
         
         .game-container {
@@ -412,8 +458,17 @@
         /* ===== 第三屏 ===== */
         .screen3 {
             background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            padding: 30px 15px 100px;
+            padding: 20px 10px 80px;
             min-height: 100vh;
+        }
+        
+        @media (max-width: 400px) {
+            .photo-card img {
+                height: 200px;
+            }
+            .photo-card {
+                padding: 8px;
+            }
         }
         
         .photo-header {
@@ -812,7 +867,7 @@
     </div>
 
     <script>
-        let timer = 60;
+        let timer = 15;
         let money = 0;
         let timerInterval = null;
         let musicPlaying = false;
@@ -877,7 +932,7 @@
         }
         
         function startGame() {
-            timer = 60;
+            timer = 15;
             money = 0;
             document.getElementById('timer').textContent = timer;
             document.getElementById('money').textContent = money;
